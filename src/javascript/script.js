@@ -3,10 +3,6 @@ document.querySelector("#search").addEventListener("submit", async (event) => {
 
   const cityName = document.querySelector("#city_name").value;
 
-  if (!cityName) {
-    return showAlert("Você precisa digitar uma cidade primeiro!");
-  }
-
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(cityName)}&appid=b6a7b8e7d667e7fc16da0f5b7ff190e8&units=metric&lang=pt_br`;
 
 
@@ -23,9 +19,7 @@ document.querySelector("#search").addEventListener("submit", async (event) => {
      description: json.weather[0].description,
      tempIcon: json.weather[0].icon,
    });
-  } else {
-    showAlert(json.message || "Não foi possível localizar :C");
-  }
+  } 
 });
 
 function showinfo(json) {
