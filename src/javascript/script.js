@@ -13,8 +13,8 @@ document.querySelector("#search").addEventListener("submit", async (event) => {
   const results = await fetch(apiUrl);
   const json = await results.json();
    
-  if (json.cod === 200) {
-      showinfo({
+  if (Number(json.cod) === 200) {
+      showinfo ({
      city: json.name,
      country: json.sys.country,
      temp: json.main.temp,
@@ -22,11 +22,9 @@ document.querySelector("#search").addEventListener("submit", async (event) => {
      tempMin: json.main.temp_min,
      description: json.weather[0].description,
      tempIcon: json.weather[0].icon,
-     
-
    });
   } else {
-    showAlert('Não foi possivel localizar :C')
+    showAlert(json.message || "Não foi possível localizar :C");
   }
 });
 
@@ -45,7 +43,7 @@ function showinfo(json) {
 
     document.querySelector('#temp_min').innerHTML = `${json.tempMin.toFixed(0)} <sup>°C</sup>`
 
-    document.querySelector('#temp_img').setAttribute('src', 'https://openweathermap.org/img/wn/10d@2x.png')
+    document.querySelector('#temp_img').setAttribute('src', `https://openweathermap.org/img/wn/${json.tempIcon}@2x.png`)
 }
 
 function showAlert(msg) {

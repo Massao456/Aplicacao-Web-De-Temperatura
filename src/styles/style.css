@@ -110,3 +110,7 @@ body {
   scale: 2;
   color: #3b82f6;
 }
+
+#alert {
+  text-align: center;
+}
