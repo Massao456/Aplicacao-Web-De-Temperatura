@@ -1,24 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Site de Clima - OpenWeather API</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div id="container">
-        <form id="search">
+      <form id="search">
+        <ion-icon name="compass-outline"></ion-icon>
+        <input type="search" id="city_name" placeholder="buscar cidade" />
+        <button type="submit">
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+      </form>
 
-        </form>
+      <div id="weather">
+        <h1 id="title">São Paulo, BR</h1>
+
+        <div id="infos">
+          <div id="temp">
+            <img id="temp_img" src="http://openweathermap.org/img/wn/04d@2x.png" alt=""/>
+             <div 
+                <p id="temp_value">
+                    24<sup>°C</sup>
+                </p>
+                 <p id="temp_description">
+                    Ensolarado
+                 </p>
+             </div>
+        </div>
+        <div id="other_infos">
+            <div class="info">
+                <ion-icon id="temp_max_icon" name="thermometer-outline"></ion-icon>
+
+                <div
+                  <h2>Temp. Max</h2>
+
+                  <p id="temp_max">
+                    24<sup>°C</sup>
+                  </p>
+               </div>
+                 
+                 <div class="info">
+                <ion-icon id="temp_min_icon" name="thermometer-outline"></ion-icon>
+
+                <div
+                  <h2>Temp. Min</h2>
+
+                  <p id="temp_min">
+                    15<sup>°C</sup>
+                  </p>
+               </div>
+
+            </div>
+        </div>
+          
     </div>
 
-
-
-
-    // Icones do ionicons
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
+    <!-- Icones do Ion Icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
