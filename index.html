@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Site de Clima - OpenWeather API</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./src/styles/style.css" />
   </head>
+
+
   <body>
     <div id="container">
       <form id="search">
@@ -16,26 +22,30 @@
         </button>
       </form>
 
-      <div id="weather">
-        <h1 id="title">São Paulo, BR</h1>
+         <div id="weather" class="show">
 
-        <div id="infos">
-          <div id="temp">
+         <h1 id="title">São Paulo, BR</h1>
+
+         <div id="infos">
+         <div id="temp">
             <img id="temp_img" src="http://openweathermap.org/img/wn/04d@2x.png" alt=""/>
-             <div 
+             <div>
                 <p id="temp_value">
                     24<sup>°C</sup>
                 </p>
-                 <p id="temp_description">
-                    Ensolarado
-                 </p>
+
+             <p id="temp_description">
+            Ensolarado
+            </p>
              </div>
-        </div>
-        <div id="other_infos">
+         </div>
+         <div id="other_infos">
+
             <div class="info">
                 <ion-icon id="temp_max_icon" name="thermometer-outline"></ion-icon>
 
-                <div
+                <div>
+
                   <h2>Temp. Max</h2>
 
                   <p id="temp_max">
@@ -46,7 +56,8 @@
                  <div class="info">
                 <ion-icon id="temp_min_icon" name="thermometer-outline"></ion-icon>
 
-                <div
+                <div>
+
                   <h2>Temp. Min</h2>
 
                   <p id="temp_min">
@@ -57,6 +68,8 @@
             </div>
         </div>
           
+     <div id="alert"></div>
+
     </div>
 
     <!-- Icones do Ion Icons -->
